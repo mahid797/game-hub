@@ -23,18 +23,18 @@ function App() {
 		<Grid
 			templateAreas={{
 				base: `"nav" "main"`,
-				lg: `"nav nav" "aside main"`,
+				md: `"nav nav" "aside main"`,
 			}}
 			templateColumns={{
 				base: '1fr',
-				lg: '200px 1fr',
+				md: '200px 1fr',
 			}}>
 			<GridItem area="nav">
 				<NavBar
 					onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
 				/>
 			</GridItem>
-			<Show above="lg">
+			<Show above="sm">
 				<GridItem area="aside" paddingX={2}>
 					<GenreList
 						onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}

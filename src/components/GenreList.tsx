@@ -22,7 +22,6 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
 	if (isLoading)
 		return <>{skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}</>;
-		
 
 	if (error) return null;
 
