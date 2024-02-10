@@ -5,6 +5,7 @@ import {
 	Image,
 	List,
 	ListItem,
+	Spinner,
 	Text,
 } from '@chakra-ui/react';
 import useGenres, { Genre } from '../hooks/useGenres';
@@ -20,7 +21,9 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 	const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 	if (isLoading)
-		return skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />);
+		return <>{skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}</>;
+		
+
 	if (error) return null;
 
 	return (
