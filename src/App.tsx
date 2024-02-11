@@ -34,7 +34,7 @@ function App() {
 					onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
 				/>
 			</GridItem>
-			<Show above="sm">
+			<Show above="md">
 				<GridItem area="aside" paddingX={2}>
 					<GenreList
 						onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
