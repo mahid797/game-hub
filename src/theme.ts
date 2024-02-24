@@ -1,8 +1,14 @@
-import { extendTheme, ThemeConfig, useColorModeValue } from '@chakra-ui/react';
+import {
+	extendTheme,
+	ThemeConfig,
+	transition,
+	useColorModeValue,
+} from '@chakra-ui/react';
 import { StyleFunctionProps } from '@chakra-ui/theme-tools';
 
 const config: ThemeConfig = {
 	initialColorMode: 'dark',
+	disableTransitionOnChange: false,
 };
 
 const theme = extendTheme({
@@ -12,6 +18,8 @@ const theme = extendTheme({
 			body: {
 				color: 'default',
 				bg: useColorModeValue('gray.50', 'gray.900'),
+				transitionProperty: 'all',
+				transitionDuration: '1000ms',
 			},
 		}),
 	},
@@ -30,6 +38,9 @@ const theme = extendTheme({
 		},
 		purple: {
 			200: '#6d2fa3',
+		},
+		yellow: {
+			600: '#FDB813',
 		},
 	},
 });

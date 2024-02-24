@@ -24,6 +24,8 @@ const GameCard = ({ game }: Props) => {
 		<Card
 			variant="elevated"
 			// color={useColorModeValue('blue.500', 'blue.200')}
+			transitionDuration="700ms"
+			transitionProperty="all"
 			backgroundColor={useColorModeValue('gray.100', '#084470')}>
 			<Image src={getCroppedImageUrl(game.background_image)} />
 			<CardBody>
